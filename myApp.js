@@ -10,7 +10,11 @@ console.log("Hello World");
 
 
 
-
+app.get("/json", (req, res)=>{
+    res.json({
+        "message": "Hello json"
+    })
+})
 
 
 
