@@ -4,8 +4,10 @@ let app = express();
 app.get("/",(request, response)=>{
     response.sendFile(__dirname+"/views/index.html");
 });
-app.use("/public/style.css", express.static());
+app.use("/public", express.static(__dirname+"/public"));
 console.log("Hello World");
+
+
 
 
 
