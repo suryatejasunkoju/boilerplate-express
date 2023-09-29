@@ -4,7 +4,7 @@ let app = express();
 app.get("/",(request, response)=>{
     response.sendFile(__dirname+"/views/index.html");
 });
-app.use("/public", express.static());
+app.use("/public/style.css", express.static());
 console.log("Hello World");
 
 
