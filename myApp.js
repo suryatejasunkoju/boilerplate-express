@@ -11,9 +11,16 @@ console.log("Hello World");
 
 
 app.get("/json", (req, res)=>{
-    res.json({
-        "message": "Hello json"
-    })
+    if (process.env.MESSAGE_STYLE==="uppercase") {
+        res.json({
+            "message": "HELLO JSON"
+        })
+    }
+    else if (process.env.MESSAGE_STYLE==="lowercase"){
+        res.json({
+            "message": "Hello json"
+        })
+    }
 })
 
 
