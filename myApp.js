@@ -19,7 +19,7 @@ app.get("/json", (req, res)=>{
             "message": "HELLO JSON"
         })
     }
-    else if (process.env.MESSAGE_STYLE==="lowercase"){
+    else {
         res.json({
             "message": "Hello json"
         })
